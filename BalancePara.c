@@ -8,9 +8,7 @@ int CheckPara(char String[N], int len)
 {
     char Stack[N] = {0};
     int top = -1;
-    printf("Received string is %s\n", String);
     for(int i = 0; i < len; i++) {
-        printf("Stack and top: %c and %d\nlen = %d \ncurrent chara is %c \n\n", top < 0 ? '?' : Stack[top], top, len, String[i]);
         
         if(String[i] == '{' || String[i] == '[' || String[i] == '(') {
             Stack[++top] = String[i];
