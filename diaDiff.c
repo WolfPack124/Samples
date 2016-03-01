@@ -3,12 +3,12 @@
 
 int findDiff(int Array[N][N])
 {
-    int i, j, d1 = 0, d2 = 0;
+    int i, d = 0;
     for(i = 0; i < N; i++){
-        d1 = d1 + Array[i][i];
-        d2 = d2 + Array[i][N-1-i];
+        d += Array[i][i];
+        d -= Array[i][N-1-i];
     }
-    return (d2-d1);
+    return d;
 }
 
 int main()
